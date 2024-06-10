@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <!-- css file -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/details.css">
+    <!-- goole fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <!-- start header section -->
+    <header>
+        <div class="container nav-top">
+            <a href="#" class="logo"><img src="img/logo-black.png" alt=""></a>
+            <div id="form">
+                <input id="input-search" type="search" placeholder="search for product....">
+                <button class="btn btn-lg btn-main-search" type="submit">search</button>
+            </div>
+            <div class="cart-header d-flex align-items-center gap-3">
+                <div class="icon-card position-relative">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="count-card">0</span>
+                </div>
+                <div class="total-price">
+                    <p class="mb-1 text-capitalize">my card</p>
+                    <p class="price-card-head"></p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container main-link d-flex justify-content-between align-items-center">
+                <span class="open-menue"><i class="fa-solid fa-bars"></i></span>
+                <ul id="main-link-header" class="d-flex mb-0 p-lg-0 gap-md-5 gap-3">
+                    <span class="close-menue"><i class="fa-solid fa-xmark"></i></span>
+                    <img class="logo-menue" src="img/logo-black.png" alt="">
+                    <li class="position-relative py-3"><a href="index.html" class="text-uppercase">home</a></li>
+                    <li class="position-relative py-3"><a href="all_product.html" class="text-uppercase">all product</a></li>
+                    <li class="position-relative py-3"><a href="about.html" class="text-uppercase">about</a></li>
+                    <li class="position-relative py-3"><a href="contact.html" class="text-uppercase">contact us</a></li>
+                </ul>
+                <div class="sign">
+                    <a href="login.html" class="btn btn-md  me-2 text-capitalize">login<i class="fa-solid fa-arrow-right-to-bracket ms-1"></i></a>
+                    <a href="sign-up.html" class="btn btn-md text-capitalize">sign up<i class="fa-solid fa-user-plus ms-1"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- end header section -->
+     <!-- start card section -->
+     <div class="cart">
+        <div class="header">
+            <h5 class="text-capitalize">my card <span class="number_item_in_card"></span></h5>
+            <span class="close-cart"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <div class="card-content">
+        </div>
+        <div class="card-bottom">
+            <div class="card-total mb-3 d-flex justify-content-between align-items-center">
+                <p class="text-capitalize"> cart subtotal</p>
+                <span class="total-price-card text-uppercase"></span>
+            </div>
+            <div class="button-in-card">
+                <button id="checkout" class="mb-3 text-capitalize card-btn" type="submit">proceed to checkout</button>
+                <button id="see-more" class="text-capitalize card-btn" type="submit">see more</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- end card section -->
+
+    <section class="allproduct my-5">
+        <div class="header-section-allproduct text-center mb-5">
+            <h2 class="text-capitalize mb-3">experience the feture of technology with our topico</h2>
+            <p class="text-capitalize">find everything you need to transform your home into smart connected space.our topico store offers wide range of divices to fit your needs</p>
+        </div>
+        <div class="container content-allproduct d-flex gap-3">
+                <button class="btn text-capitalize open-filter">open filter</button>
+                <div class="filter-section content-left-section">
+                    <h3 class="header-fiter text-capitalize fw-bold mb-4">filter</h3>
+                    <div class="content-filter w-100">
+                        <div class="box-filter w-100">
+                            <h3 class="name-section w-100 mb-3">category</h3>
+                            <div class="content-category-section w-100">
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="phone">phone</label>
+                                    <input id="phone" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="tablet">tablet</label>
+                                    <input id="tablet" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="electronics">electronics</label>
+                                    <input id="electronics" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="tv">tv</label>
+                                    <input id="tv" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="fashion">fashion</label>
+                                    <input id="fashion" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="watches">watches</label>
+                                    <input id="watches" type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-filter w-100">
+                            <h3 class="name-section w-100 mb-3">brand</h3>
+                            <div class="content-brand-section w-100">
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="samsung">samsung</label>
+                                    <input id="samsung" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="apple">apple</label>
+                                    <input id="apple" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="oppo">oppo</label>
+                                    <input id="oppo" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="intel">intel</label>
+                                    <input id="intel" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="huawei">huawei</label>
+                                    <input id="huawei" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize" for="xiamo">xiamo</label>
+                                    <input id="xiamo" type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-filter w-100">
+                            <h3 class="name-section w-100 mb-3">color</h3>
+                            <div class="content-category-section w-100">
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize color red-color-label" for="red"></label>
+                                    <input id="red" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize color blue-color-label" for="blue"></label>
+                                    <input id="blue" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize color black-color-label" for="black"></label>
+                                    <input id="black" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize color green-color-label" for="green"></label>
+                                    <input id="green" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize color orange" for="orange"></label>
+                                    <input id="orange" type="checkbox">
+                                </div>
+                                <div class="category-input mb-3 d-flex align-items-center justify-content-between">
+                                    <label class="text-capitalize color yellow-color-label" for="yellow"></label>
+                                    <input id="yellow" type="checkbox">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-right-section mt-4 mt-lg-0">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- start show more button -->
+    <div class="main-div-button  mb-5 text-center ">
+        <button class="show-more btn btn-lg btn-danger text-capitalize">show more</button>
+    </div>
+    <!-- end show more button -->
+<!-- start section footer -->
+<footer>
+    <div class="header-footer">
+        <a href="index.html">
+            <h2 class="text-capitalize">back to top</h2>
+        </a>
+    </div>
+    <div class="footer-content py-4">
+        <div class="container">
+            <div class="row text-center text-sm-start">
+                <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0 col-12">
+                    <h3 class="header mb-4 fs-4"><img src="img/logo-white.png" alt=""></h3>
+                    <div class="logo-footer">
+                        <img class="mb-2" src="img/icon_email.png" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, tempore.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0 col-12">
+                    <h3 class="header mb-4 text-uppercase">faqs & help</h3>
+                    <div class="main-link">
+                        <ul class="p-0">
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">faqs</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">order tacking</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">contact</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">event</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">help contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0 col-12">
+                    <h3 class="header mb-4 text-capitalize">shipping & delivary</h3>
+                    <div class="main-link">
+                        <ul class="p-0">
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">delivary information</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">discount</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">payment & shaping</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">eslimated delavary time</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">shiping quate</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0 col-12">
+                    <h3 class="header mb-4 text-capitalize">information</h3>
+                    <div class="main-link">
+                        <ul class="p-0">
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">popular</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">our services</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">your account</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">privacy & police</a></li>
+                            <li class="mb-2 p-0 text-capitalize"><a href="#">terms & condition</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- end section footer -->
+
+
+    <!-- javascript file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/item_home.js"></script>
+    <script src="js/all-product.js"></script>
+    <script src="js/action-item.js"></script>
+    <script src="js/all.min.js"></script>
+    
+</body>
+</html>

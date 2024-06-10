@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <!-- css file -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/card.css">
+    <!-- goole fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <!-- start header section -->
+    <div class="conent">
+        <div class="dashboard">
+                <ul>
+                    <li class="mb-sm-4 logo">
+                        <a href="index.html">
+                            <img class="d-md-block d-none" src="img/logo-black.png" alt="">
+                            <img class="d-sm-block d-md-none small-img" src="img/logo3.png" alt=""> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex" href="index.html">
+                            <span class="icon me-2"><i class="fa-solid fa-house"></i></span>
+                            <h2 class="name-box">home</h2>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a class="d-flex" href="all_product.html">
+                            <span class="icon me-2"><i class="fa-brands fa-product-hunt"></i></span>
+                            <h2 class="name-box">all product</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex" href="contact.html">
+                            <span class="icon me-2"><i class="fa-solid fa-address-book"></i></span>
+                            <h2 class="name-box">contact</h2>
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a class="d-flex" href="about.html">
+                            <span class="icon me-2"><i class="fa-solid fa-address-card"></i></span>
+                            <h2 class="name-box">about</h2>
+                        </a>
+                    </li>
+                        
+                    <li >
+                        <a class="d-flex" href="card-padge.html">
+                            <span class="icon me-2"><i class="fa-solid fa-cart-plus"></i></span>
+                            <h2 class="name-box">card</h2>
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a class="d-flex" href="favorite.html">
+                            <span class="icon me-2"><i class="fa-solid fa-heart"></i></span>
+                            <h2 class="name-box">favorite</h2>
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a class="d-flex" href="order.html">
+                            <span class="icon me-2"><i class="fa-solid fa-person-biking"></i></span>
+                            <h2 class="name-box">order</h2>
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a class="d-flex" href="profile.html">
+                            <span class="icon me-2"><i class="fa-solid fa-user"></i></span>
+                            <h2 class="name-box">profile</h2>
+                        </a>
+                    </li>
+                    
+                    <li class="active">
+                        <a class="d-flex" href="#">
+                            <span class="icon me-2"><i class="fas fa-sign-in"></i></span>
+                            <h2 id="log-out" class="name-box">log out</h2>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        <div class="content-card">
+            <div class="header-search mb-4">
+                <input type="text" placeholder="Search Here....">
+                <div class="profile  d-none d-sm-flex">
+                    <h3 class="name-profile"></h3>
+                    <img src="img/logo3.png" alt="">
+                </div>
+            </div>
+            <div class="slider mb-4">
+                <img src="img/logo-4.png" alt="" class="w-100">
+            </div>
+            <div class="profile-content">
+                        <div class="box mb-md-3 mb-lg-0">
+                            <h3 class="header-box text-capitalize fw-bold mb-3">personal info</h3>
+                            <div class="box-body">
+                                <button class="change-btn-name btn text-capitalize me-auto">save change</button>
+                                <form action="" class="personal-data mt-3">
+                                    <div class="box-input mb-3">
+                                        <label class="text-capitalize fw-bold mb-1" for="name">name</label>
+                                        <input  class="w-100 d-block" id="name" type="text">
+                                    </div>
+                                    <div class="box-input">
+                                        <label class="text-capitalize fw-bold mb-1" for="Bio">Bio</label>
+                                        <input class="w-100 d-block" id="Bio" value="Topico e-commerce">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="box mb-md-3 mb-lg-0">
+                            <h3 class="header-box-email text-capitalize fw-bold mb-3">personal info</h3>
+                            <div class="box-body">
+                                <button class="change-btn-email btn text-capitalize me-auto">save change</button>
+                                <form action="" class="personal-data">
+                                    <div class="box-input ">
+                                        <label class="text-capitalize fw-bold" for="email">email</label>
+                                        <input  class="w-100 d-block" id="email" type="email">
+                                    </div>
+                                    <div class="box-input position-relative my-3">
+                                        <label class="text-capitalize fw-bold" for="pass">password</label>
+                                        <button class="btn change-password">change</button>
+                                        <input class="w-100 d-block" id="pass" type="password">
+                                    </div>
+                                    <div class="box-input position-relative">
+                                        <labesl class="text-capitalize fw-bold" for="add-num">phone</label>
+                                        <input class="w-100 d-block" id="add-num" type="tel">
+                                        <button class="add-number">+</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="box-order-favorite mb-md-3 mb-lg-0">
+                            <div class="order text-center">
+                                <h2 class="headr-order text-capitalize fw-bold mb-2">order</h2>
+                                <span class="number-order">0</span>
+                            </div>
+                            <div class="favorite text-center">
+                                <h2 class="headr-favorite text-capitalize fw-bold mb-2">favorite</h2>
+                                <span class="number-favorite">0</span>
+                            </div>
+                        </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- end section footer -->
+    
+
+    <!-- javascript file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/all.min.js"></script>
+    
+</body>
+</html>

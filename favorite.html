@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <!-- css file -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/card.css">
+    <!-- goole fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <!-- start header section -->
+    <div class="conent">
+        <div class="dashboard">
+                <ul>
+                    <li class="mb-sm-4 logo">
+                        <a href="index.html">
+                            <img class="d-md-block d-none" src="img/logo-black.png" alt="">
+                            <img class="d-sm-block d-md-none small-img" src="img/logo3.png" alt=""> 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex" href="index.html">
+                            <span class="icon me-2"><i class="fa-solid fa-house"></i></span>
+                            <h2 class="name-box">home</h2>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a class="d-flex" href="all_product.html">
+                            <span class="icon me-2"><i class="fa-brands fa-product-hunt"></i></span>
+                            <h2 class="name-box">all product</h2>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex" href="contact.html">
+                            <span class="icon me-2"><i class="fa-solid fa-address-book"></i></span>
+                            <h2 class="name-box">contact</h2>
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a class="d-flex" href="about.html">
+                            <span class="icon me-2"><i class="fa-solid fa-address-card"></i></span>
+                            <h2 class="name-box">about</h2>
+                        </a>
+                    </li>
+                        
+                    <li >
+                        <a class="d-flex" href="card-padge.html">
+                            <span class="icon me-2"><i class="fa-solid fa-cart-plus"></i></span>
+                            <h2 class="name-box">card</h2>
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a class="d-flex" href="favorite.html">
+                            <span class="icon me-2"><i class="fa-solid fa-heart"></i></span>
+                            <h2 class="name-box">favorite</h2>
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a class="d-flex" href="order.html">
+                            <span class="icon me-2"><i class="fa-solid fa-person-biking"></i></span>
+                            <h2 class="name-box">order</h2>
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a class="d-flex" href="profile.html">
+                            <span class="icon me-2"><i class="fa-solid fa-user"></i></span>
+                            <h2 class="name-box">profile</h2>
+                        </a>
+                    </li>
+                    
+                    <li class="active">
+                        <a class="d-flex" href="#">
+                            <span class="icon me-2"><i class="fas fa-sign-in"></i></span>
+                            <h2 id="log-out" class="name-box">log out</h2>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        <div class="content-favorite">
+            <div class="header-search mb-4">
+                <input onkeyup="search()" id="main-input" type="text" placeholder="Search Here....">
+                <div class="profile d-none d-sm-flex">
+                    <h3 class="name-profile"></h3>
+                    <img src="img/logo3.png" alt="">
+                </div>
+            </div>
+            <div class="content-product-favorite px-3">
+                
+            </div>
+        </div>
+    </div>
+    <!-- end section footer -->
+
+
+    <!-- javascript file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/favorite.js"></script>
+    <script src="js/all.min.js"></script>
+    
+</body>
+</html>

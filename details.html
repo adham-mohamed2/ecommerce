@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-commerce</title>
+    <!-- css file -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/details.css">
+    <!-- goole fonts  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <!-- start header section -->
+    <header>
+        <div class="container nav-top">
+            <a href="#" class="logo"><img src="img/logo-black.png" alt=""></a>
+            <div id="form">
+                <input type="search" placeholder="search for product....">
+                <button class="btn btn-lg" type="submit">search</button>
+            </div>
+            <div class="cart-header d-flex align-items-center gap-3">
+                <div class="icon-card position-relative">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="count-card">0</span>
+                </div>
+                <div class="total-price">
+                    <p class="mb-1 text-capitalize">my card</p>
+                    <p class="price-card-head"></p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container main-link d-flex justify-content-between align-items-center">
+                <span class="open-menue"><i class="fa-solid fa-bars"></i></span>
+                <ul id="main-link-header" class="d-flex mb-0 p-lg-0 gap-md-5 gap-3">
+                    <span class="close-menue"><i class="fa-solid fa-xmark"></i></span>
+                    <img class="logo-menue" src="img/logo-black.png" alt="">
+                    <li class="position-relative py-3"><a href="index.html" class="text-uppercase">home</a></li>
+                    <li class="position-relative py-3"><a href="all_product.html" class="text-uppercase">all product</a></li>
+                    <li class="position-relative py-3"><a href="about.html" class="text-uppercase">about</a></li>
+                    <li class="position-relative py-3"><a href="contact.html" class="text-uppercase">contact us</a></li>
+                </ul>
+                <div class="sign">
+                    <a href="login.html" class="btn btn-md  me-2 text-capitalize">login<i class="fa-solid fa-arrow-right-to-bracket ms-1"></i></a>
+                    <a href="sign-up.html" class="btn btn-md text-capitalize">sign up<i class="fa-solid fa-user-plus ms-1"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- end header section -->
+     <!-- start card section -->
+     <div class="cart">
+        <div class="header">
+            <h5 class="text-capitalize">my card <span class="number_item_in_card"></span></h5>
+            <span class="close-cart"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+        <div class="card-content">
+        </div>
+        <div class="card-bottom">
+            <div class="card-total mb-3 d-flex justify-content-between align-items-center">
+                <p class="text-capitalize"> cart subtotal</p>
+                <span class="total-price-card text-uppercase"></span>
+            </div>
+            <div class="button-in-card">
+                <button id="checkout" class="mb-3 text-capitalize card-btn" type="submit">proceed to checkout</button>
+                <button id="see-more" class="text-capitalize card-btn" type="submit">see more</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- end card section -->
+
+    <!-- start section details product -->
+    <section class="details py-5 my-5">
+        <div class="container contant_details">
+            
+        </div>
+    </section>
+    <!-- end section details product -->
+    <div class="carousel-product my-5">
+        <div class="container">
+            <div class="header-carusel mb-3 d-flex justify-content-between align-items-center">
+                <h2 class="text-capitalize fs-3 fw-bold">related <span class="fw-normal">product</span></h2>
+                <div class="transition">
+                    <i onclick="scrolll()" class="fa-solid fa-angle-left angle-trasation"></i>
+                    <i onclick="scrollr()" class="fa-solid fa-angle-right angle-trasation"></i>
+                </div>
+            </div>
+            <div class="content-carousel">
+            </div>
+        </div>
+    </div>
+    <!-- start related product carousel -->
+
+    <!-- end product carousel -->
+
+    <!-- start section footer -->
+    <footer>
+        <div class="header-footer">
+            <a href="index.html">
+                <h2 class="text-capitalize">back to top</h2>
+            </a>
+        </div>
+        <div class="footer-content py-4">
+            <div class="container">
+                <div class="row text-center text-sm-start">
+                    <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0 col-12">
+                        <h3 class="header mb-4 fs-4"><img src="img/logo-white.png" alt=""></h3>
+                        <div class="logo-footer">
+                            <img class="mb-2" src="img/icon_email.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, tempore.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0 col-12">
+                        <h3 class="header mb-4 text-uppercase">faqs & help</h3>
+                        <div class="main-link">
+                            <ul class="p-0">
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">faqs</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">order tacking</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">contact</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">event</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">help contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0 col-12">
+                        <h3 class="header mb-4 text-capitalize">shipping & delivary</h3>
+                        <div class="main-link">
+                            <ul class="p-0">
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">delivary information</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">discount</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">payment & shaping</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">eslimated delavary time</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">shiping quate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-3 mb-lg-0 col-12">
+                        <h3 class="header mb-4 text-capitalize">information</h3>
+                        <div class="main-link">
+                            <ul class="p-0">
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">popular</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">our services</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">your account</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">privacy & police</a></li>
+                                <li class="mb-2 p-0 text-capitalize"><a href="#">terms & condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end section footer -->
+
+
+    <!-- javascript file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/item_home.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/action-item.js"></script>
+    <script src="js/all.min.js"></script>
+    
+</body>
+</html>
