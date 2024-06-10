@@ -114,73 +114,85 @@ try{
 // ************************************************************** add product to card
 // let user = localStorage.getItem("username_user");
 // let sin_up = JSON.parse(localStorage.getItem("sign-up"));
-function add_product(parentElement){
-    let card_content = document.querySelector(".card-content");
-    let parent = parentElement.parentElement;
-    let name = parent.querySelector(".name-product").innerHTML;
-    let category = parent.querySelector(".name-product").id;
-    let img = parent.querySelector(".img-main-img").src;
-    let price = parent.querySelector(".new-price").innerHTML;
-    let id = parent.id;
-    let pro_item = {name , price , img , id , category};
-    sin_up.find((item)=>{
-        if(item.username == user){
-            if(item.product_stor.find(el=>el.id == pro_item.id)){
-                confirm("product already have been");
-                return;
-            }else{
-                item.product_stor.push(pro_item)
-                card_content.innerHTML +=`
-                    <div class="box">
-                            <div class="image">
-                                <img src="${img}" alt="">
-                            </div>
-                            <div class="title-box">
-                                <h4  class="product-name mb-2">${name}</h4>
-                                <span class="product-price">${price}</span>
-                            </div>
-                            <button onclick=" remove_product(this.parentElement)" class="remove-item"><i class="fa-solid fa-trash"></i></button>
-                        </div>
-                    `
-                localStorage.setItem("sign-up" , JSON.stringify(sin_up))
-            }
-
+    function add_product(parentElement){
+        if(user == null){
+            confirm("please sign-up to use this website");
+        }else{
+            let card_content = document.querySelector(".card-content");
+            let parent = parentElement.parentElement;
+            let name = parent.querySelector(".name-product").innerHTML;
+            let category = parent.querySelector(".name-product").id;
+            let img = parent.querySelector(".img-main-img").src;
+            let price = parent.querySelector(".new-price").innerHTML;
+            let id = parent.id;
+            let pro_item = {name , price , img , id , category};
+            sin_up.find((item)=>{
+                if(item.username == user){
+                    if(item.product_stor.find(el=>el.id == pro_item.id)){
+                        confirm("product already have been");
+                        return;
+                    }else{
+                        item.product_stor.push(pro_item)
+                        card_content.innerHTML +=`
+                            <div class="box">
+                                    <div class="image">
+                                        <img src="${img}" alt="">
+                                    </div>
+                                    <div class="title-box">
+                                        <h4  class="product-name mb-2">${name}</h4>
+                                        <span class="product-price">${price}</span>
+                                    </div>
+                                    <button onclick=" remove_product(this.parentElement)" class="remove-item"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            `
+                        localStorage.setItem("sign-up" , JSON.stringify(sin_up))
+                    }
+        
+                    
+                }
+            })
             
         }
-    })
-    
-}
+        
+    }
+
 
 
 // // ************************************************************************************* add  to favorite
 
-let add_favorite = document.querySelectorAll(".add_favorite");
+    let add_favorite = document.querySelectorAll(".add_favorite");
 add_favorite.forEach((item)=>{
     item.addEventListener("click" , add_to_favorite)
 })
 
 function add_to_favorite(){
-    let parent = this.parentElement;
-    let parent2 = parent.parentElement;
-    let parent3 = parent2.parentElement;
-    let el_favorite = parent2.querySelector(".add_favorite");
-    el_favorite.style.color = "red";
-    let img = parent3.querySelector(".img-main-img").src;
-    let name = parent3.querySelector(".name-product").innerHTML;
-    let category = parent3.querySelector(".name-product").id;
-    let price = parent3.querySelector(".new-price").innerHTML;
-    let id = parent3.id;
-    let pro_fevorite = {img , name , price , id , category}
-    sin_up.find((item)=>{
-        if(item.username == user){
-            if(item.favorite.find(el=>el.id == pro_fevorite.id)){
-                confirm("product already added to favorite");
-                return;
+    if(user == null){
+        confirm("please sign-up to use this website");
+        
+    }else{
+        let parent = this.parentElement;
+        let parent2 = parent.parentElement;
+        let parent3 = parent2.parentElement;
+        let el_favorite = parent2.querySelector(".add_favorite");
+        el_favorite.style.color = "red";
+        let img = parent3.querySelector(".img-main-img").src;
+        let name = parent3.querySelector(".name-product").innerHTML;
+        let category = parent3.querySelector(".name-product").id;
+        let price = parent3.querySelector(".new-price").innerHTML;
+        let id = parent3.id;
+        let pro_fevorite = {img , name , price , id , category}
+        sin_up.find((item)=>{
+            if(item.username == user){
+                if(item.favorite.find(el=>el.id == pro_fevorite.id)){
+                    confirm("product already added to favorite");
+                    return;
+                }
+                else{
+                    item.favorite.push(pro_fevorite);
+                    localStorage.setItem("sign-up" , JSON.stringify(sin_up));
+                }
             }
-            else{
-                item.favorite.push(pro_fevorite);
-                localStorage.setItem("sign-up" , JSON.stringify(sin_up));
-            }
-        }
-    })
+        })
+    }
 }
+

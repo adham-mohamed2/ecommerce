@@ -76,79 +76,83 @@ let container_array;// array
 
     let sin_up = JSON.parse(localStorage.getItem("sign-up"));
     let user = localStorage.getItem("username_user");
-    if(localStorage.getItem("sign-up")){
-    sin_up.find((item)=>{
-        if(item.username == user){
-            item.product_stor.map((item)=>{
-                card_content.innerHTML +=`
-                    <div id="${item.id}" class="box">
-                        <div class="image">
-                            <img src="${item.img}" alt="">
-                        </div>
-                        <div class="title-box">
-                            <h4 class="product-name">${item.name}</h4>
-                            <span class="product-price mt-3">${item.price}</span>
-                        </div>
-                        <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
-                    </div>
-                `
-            })
-        }
-    })
-    try{
-        function add_to_card(){
-            let parent = this.parentElement;
-            let parent2 = parent.parentElement;
-            let parent3 = parent2.parentElement;
-            
-            let name = parent3.querySelector(".card-title").innerHTML;
-            let category = parent3.querySelector(".card-title").id;
-            let img = parent3.querySelector(".card-img").src;
-            let price = parent3.querySelector(".new-price").innerHTML;
-            let id = parent3.id;
-            let product_pro = {name , img , price , id , category};
-        
-            sin_up.find((item)=>{ 
+        if(localStorage.getItem("sign-up")){
+            sin_up.find((item)=>{
                 if(item.username == user){
-                    if(item.product_stor.find(el => el.id == product_pro.id)){
-                        confirm("product already have been");
-                        return;
-                    }
-                    else{
-                        item.product_stor.push(product_pro);
-                        localStorage.setItem("sign-up" , JSON.stringify(sin_up));
+                    item.product_stor.map((item)=>{
                         card_content.innerHTML +=`
-                            <div id="${id}" class="box">
+                            <div id="${item.id}" class="box">
                                 <div class="image">
-                                    <img src="${img}" alt="">
+                                    <img src="${item.img}" alt="">
                                 </div>
                                 <div class="title-box">
-                                    <h4 class="product-name mb-2">${name}</h4>
-                                    <span class="product-price">${price}</span>
+                                    <h4 class="product-name">${item.name}</h4>
+                                    <span class="product-price mt-3">${item.price}</span>
                                 </div>
                                 <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
                             </div>
                         `
-                    }
-                    
+                    })
                 }
             })
-
-            sin_up.find((item)=>{
-                if(item.username == user){
-                    count_card.innerHTML = item.product_stor.length;
-                    number_item_in_card.innerHTML = `(${item.product_stor.length} item in card)`;
-                }
-            })
-
-            loadcontent();
         }
-    }
-    catch(e){
-        console.log(e);
-    }
-}
-
+        try{
+            function add_to_card(){
+                if(user == null){
+                    confirm("please sign-up to use this website");
+                    }else{
+                    let parent = this.parentElement;
+                    let parent2 = parent.parentElement;
+                    let parent3 = parent2.parentElement;
+                
+                    let name = parent3.querySelector(".card-title").innerHTML;
+                    let category = parent3.querySelector(".card-title").id;
+                    let img = parent3.querySelector(".card-img").src;
+                    let price = parent3.querySelector(".new-price").innerHTML;
+                    let id = parent3.id;
+                    let product_pro = {name , img , price , id , category};
+            
+                    sin_up.find((item)=>{ 
+                        if(item.username == user){
+                            if(item.product_stor.find(el => el.id == product_pro.id)){
+                                confirm("product already have been");
+                                return;
+                            }
+                            else{
+                                item.product_stor.push(product_pro);
+                                localStorage.setItem("sign-up" , JSON.stringify(sin_up));
+                                card_content.innerHTML +=`
+                                    <div id="${id}" class="box">
+                                        <div class="image">
+                                            <img src="${img}" alt="">
+                                        </div>
+                                        <div class="title-box">
+                                            <h4 class="product-name mb-2">${name}</h4>
+                                            <span class="product-price">${price}</span>
+                                        </div>
+                                        <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                `
+                            }
+                            
+                        }
+                    })
+    
+                    sin_up.find((item)=>{
+                        if(item.username == user){
+                            count_card.innerHTML = item.product_stor.length;
+                            number_item_in_card.innerHTML = `(${item.product_stor.length} item in card)`;
+                        }
+                    })
+    
+                loadcontent();
+                }
+            }
+        }
+        catch(e){
+            console.log(e);
+        }
+    
 
 // ************************************************************************************* remove product from card
 try{
@@ -218,34 +222,39 @@ function details(parentElement){
     console.log(e);
 }
 // ************************************************************************************************ add to favorite
-try{
 
-function getfavorite(){
-    let parent = this.parentElement;
-    let parent2 = parent.parentElement;
-    let el_favorite = parent2.querySelector(".add_favorite");
-    el_favorite.style.color = "red";
-    let img = parent2.querySelector(".card-img").src;
-    let name = parent2.querySelector(".card-title").innerHTML;
-    let category = parent2.querySelector(".card-title").id;
-    let price = parent2.querySelector(".new-price").innerHTML;
-    let id = parent2.id;
-    let favorite_pro = {img , name , price , id , category};
 
-    sin_up.find(item=>{
-        if(item.username == user){
-            if(item.favorite.find(item => item.id == favorite_pro.id)){
-                confirm("prduct already have been");
-                return;
+    try{
+
+        function getfavorite(){
+            if(user == null){
+                confirm("please sign-up to use this website");
             }else{
-                item.favorite.push(favorite_pro);
-                localStorage.setItem("sign-up" , JSON.stringify(sin_up));
+                let parent = this.parentElement;
+                let parent2 = parent.parentElement;
+                let el_favorite = parent2.querySelector(".add_favorite");
+                el_favorite.style.color = "red";
+                let img = parent2.querySelector(".card-img").src;
+                let name = parent2.querySelector(".card-title").innerHTML;
+                let category = parent2.querySelector(".card-title").id;
+                let price = parent2.querySelector(".new-price").innerHTML;
+                let id = parent2.id;
+                let favorite_pro = {img , name , price , id , category};
+            
+                sin_up.find(item=>{
+                    if(item.username == user){
+                        if(item.favorite.find(item => item.id == favorite_pro.id)){
+                            confirm("prduct already have been");
+                            return;
+                        }else{
+                            item.favorite.push(favorite_pro);
+                            localStorage.setItem("sign-up" , JSON.stringify(sin_up));
+                        }
+                    }
+                })
             }
+            
         }
-    })
-}
-}catch(e){
-    console.log(e);
-}
-
-
+        }catch(e){
+            console.log(e);
+        }
